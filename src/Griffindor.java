@@ -1,5 +1,7 @@
-public class Griffindor extends hogwarts {
-    private int nobility, honor, bravery;
+public class Griffindor extends Hogwarts {
+    private int nobility;
+    private int honor;
+    private int bravery;
     // конструктор
     public Griffindor(String name, int magicPower, int transDistance, int nobility, int honor, int bravery) {
         super(name, magicPower, transDistance);
@@ -30,6 +32,20 @@ public class Griffindor extends hogwarts {
     @Override
     public String toString() {
         return "Факультет 'Гриффиндор'. Имя студента: " + getName() + ". Сила магии: " + getMagicPower() + ". Расстоянии трансгрессии: " + getTransDistance() + ". Благородство: "
-                + nobility + ". Честь: " + honor + ". Храбрость: " + bravery + ".";
+                + getNobility() + ". Честь: " + getHonor() + ". Храбрость: " + getBravery () + ".";
     }
-}
+
+    public static void compareStudents (Griffindor[] griffindor) {
+        int sum1 = griffindor[2].getNobility() + griffindor[2].getHonor() + griffindor[2].getBravery();
+        int sum2 = griffindor[1].getNobility() + griffindor[1].getHonor() + griffindor[1].getBravery();
+        if (sum1 > sum2) {
+            System.out.println(griffindor[2].getName() + "(" + sum1 + ")" + " круче, чем " + griffindor[1].getName() + "(" + sum2 + ").");
+        } else if (sum1 == sum2) {
+            System.out.println(griffindor[2].getName() + "(" + sum1 + ")" + " также крут, как и " + griffindor[1].getName() + "(" + sum2 + ")");
+        } else {
+            System.out.println(griffindor[1].getName() + "(" + sum2 + ")" + " круче, чем " + griffindor[2].getName() + "(" + sum1 + ")");
+        }
+
+    }
+    }
+

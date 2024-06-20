@@ -1,4 +1,4 @@
-public class Hufflepuff extends hogwarts {
+public class Hufflepuff extends Hogwarts {
     private int hardWork, loyalty, honesty;
 
     // конструктор
@@ -34,4 +34,18 @@ public class Hufflepuff extends hogwarts {
                 + hardWork + ". Верность: " + loyalty + ". Честность: " + honesty + ".";
 
     }
+
+    public static void compareStudents (Hufflepuff[] hufflepuff) {
+        int sum1 = hufflepuff[0].getHardWork() + hufflepuff[0].getLoyalty() + hufflepuff[0].getHonesty();
+        int sum2 = hufflepuff[1].getHardWork() + hufflepuff[1].getLoyalty() + hufflepuff[1].getHonesty();
+        if (sum1 > sum2) {
+            System.out.println(hufflepuff[0].getName() + "(" + sum1 + ")" + " круче, чем " + hufflepuff[1].getName() + "(" + sum2 + ").");
+        } else if (sum1 == sum2) {
+            System.out.println(hufflepuff[0].getName() + "(" + sum1 + ")" + " также крут, как и " + hufflepuff[1].getName() + "(" + sum2 + ")");
+        } else {
+            System.out.println(hufflepuff[1].getName() + "(" + sum2 + ")" + " круче, чем " + hufflepuff[0].getName() + "(" + sum1 + ")");
+        }
+
+    }
 }
+

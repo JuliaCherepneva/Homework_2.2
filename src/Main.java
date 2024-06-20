@@ -1,11 +1,10 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    private static final Griffindor[] griffindor = new Griffindor[3];
+    static final Griffindor[] griffindor = new Griffindor[3];
     private static final Hufflepuff[] hufflepuff = new Hufflepuff[3];
     private static final Ravenclaw[] ravenclaw = new Ravenclaw[3];
     private static final Slytherin[] slytherin = new Slytherin[3];
-
 
     public static void printStudents() {
         for (int i = 0; i < griffindor.length; i++) {
@@ -44,5 +43,16 @@ public class Main {
         slytherin [2] = new Slytherin("Грегори Гойл", 78, 34, 77, 46, 32, 78, 54);
 
         printStudents();
+
+        System.out.println("============================");
+        Griffindor.compareStudents (griffindor);
+        Hufflepuff.compareStudents (hufflepuff);
+        Ravenclaw.compareStudents (ravenclaw);
+        Slytherin.compareStudents (slytherin);
+
+        System.out.println("============================");
+        Hogwarts.compareStudents (griffindor, slytherin);
+        Hogwarts.compareMagic (griffindor,slytherin);
+        Hogwarts.compareTransDistance (griffindor,slytherin);
     }
 }
